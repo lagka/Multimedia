@@ -2,11 +2,12 @@ function [output,summa]=D_log2(target,reference1,reference2,range,blocksize)
     [m,nn,z]=size(target);
     summa=0;
   
-    ran=(range-1)/2;
+    ran=range;
     for i=1:blocksize:m
         for j=1:blocksize:nn
             min=realmax;
             min2=realmax;
+         
             n_plum=floor(log2(ran));
             n=max(2,2^(n_plum-1));          
             n2=max(2,2^(n_plum-1));

@@ -44,10 +44,10 @@ tic
 [out88,sumd88]=D_log(target,reference1,8,8);
 bestmatch88=(abs(target(:,:,1)-out88(:,:,1))+abs(target(:,:,2)-out88(:,:,2))+abs(target(:,:,3)-out88(:,:,3)));
 toc
-psnr88d=computerPSNR(target,out88);
-figure
+ psnr88d=computerPSNR(target,out88);
+ figure
 imwrite(bestmatch88,'a_2dlogsearch8x8.jpg');
-imshow(bestmatch88);
+ imshow(bestmatch88);
 tic
 [out168,sumd168]=D_log(target,reference1,16,8);
 bestmatch168=(abs(target(:,:,1)-out168(:,:,1))+abs(target(:,:,2)-out168(:,:,2))+abs(target(:,:,3)-out168(:,:,3)));
@@ -96,12 +96,12 @@ figure
 imwrite(bestmatch1616,'b_fullsearch16x16.jpg');
 imshow(bestmatch1616);
 
-[out88,sum2d88]=D_log(target2,reference1,8,8);
-bestmatch88=(abs(target2(:,:,1)-out88(:,:,1))+abs(target2(:,:,2)-out88(:,:,2))+abs(target2(:,:,3)-out88(:,:,3)));
-psnr88d2=computerPSNR(target2,out88);
-figure
-imwrite(bestmatch88,'b_2dlogsearch8x8.jpg');
-imshow(bestmatch88);
+ [out88,sum2d88]=D_log(target2,reference1,8,8);
+ bestmatch88=(abs(target2(:,:,1)-out88(:,:,1))+abs(target2(:,:,2)-out88(:,:,2))+abs(target2(:,:,3)-out88(:,:,3)));
+ psnr88d2=computerPSNR(target2,out88);
+ figure
+ imwrite(bestmatch88,'b_2dlogsearch8x8.jpg');
+ imshow(bestmatch88);
 [out168,sum2d168]=D_log(target2,reference1,16,8);
 bestmatch168=(abs(target2(:,:,1)-out168(:,:,1))+abs(target2(:,:,2)-out168(:,:,2))+abs(target2(:,:,3)-out168(:,:,3)));
 psnr168d2=computerPSNR(target2,out168);
